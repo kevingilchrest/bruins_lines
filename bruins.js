@@ -24,12 +24,10 @@ function shuffleArray(array) {
     return array;
  }
 
-
- //Save the shuffled players by positions to new varaibles
- let newCenters = shuffleArray(centers);
- let newLeftWingers = shuffleArray(leftWingers);
- let newRightWingers = shuffleArray(rightWingers);
- 
+//Shuffle players by position
+let newCenters = shuffleArray(centers);
+let newLeftWingers = shuffleArray(leftWingers);
+let newRightWingers = shuffleArray(rightWingers);
  
 //Generate the new lines by looping through the shuffled arrays
 function generateLines() {
@@ -78,3 +76,4 @@ button.addEventListener("click", () => {
     generateLines();
     populate();
 });
+
