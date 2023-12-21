@@ -2,6 +2,11 @@
   font-family: 'Sports Jersey', sans-serif;                                            
 }
 
+#logo {
+  width: 150px;
+  height: 150px;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,11 +19,15 @@ body {
   
   h1 {
     margin-bottom: 20px;
+    font-size: 35px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .rectangle-row {
     display: flex;
     margin-bottom: 20px;
+    -webkit-text-stroke: .5px white;
   }
   
   .rectangle {
@@ -26,7 +35,7 @@ body {
     height: 50px;
     margin: 0 10px;
     background-color: black;
-    color: #fff;
+    color: gold;
     text-align: center;
     line-height: 75px;
     border: 3px solid gold;
@@ -40,8 +49,8 @@ body {
     margin-top: 20px;
     padding: 10px;
     font-size: 16px;
-    background-color: black;
-    color: white;
-    border: 3px solid gold;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
     cursor: pointer;
   }
