@@ -1,7 +1,8 @@
 //Populate the initial arrays by grouping the players by position
 const centers = ["Coyle", "Geekie", "Poitras", "Beecher"];
 const leftWingers = ["Debrusk", "Marchand", "Van Riemsdyk", "Lauko"];
-const rightWingers= ["Pastrnak", "Frederic", "Heinen", "Steen"];
+const rightWingers = ["Pastrnak", "Frederic", "Heinen", "Steen"];
+const dmen = ["Lohrei", "McAvoy", "Lindholm", "Carlo", "Shattenkirk", "Forbort"];
 
 
 //Function to shuffle the players
@@ -41,7 +42,18 @@ function shuffleCenters() {
     return rightWingers;
  }
 
- //console.log(shuffleCenters());
+ function shuffleDmen() {
+    for (let i = dmen.length - 1; i > 0; i--) { 
+   
+        let j = Math.floor(Math.random() * (i + 1));
+                   
+        let temp = dmen[i];
+        dmen[i] = dmen[j];
+        dmen[j] = temp;
+    }
+    return dmen;
+ }
+
 
 
 //Create variables for the document objects
@@ -60,6 +72,14 @@ const secondLineRW = document.getElementById("rw2");
 const thirdLineRW = document.getElementById("rw3");
 const fourthLineRW = document.getElementById("rw4");
 
+const d1 = document.getElementById("d1");
+const d2 = document.getElementById("d2");
+const d3 = document.getElementById("d3");
+const d4 = document.getElementById("d4");
+const d5 = document.getElementById("d5");
+const d6 = document.getElementById("d6");
+
+
 
 //Function to populate the corresponding containers in html
 function populate() {
@@ -77,6 +97,13 @@ function populate() {
     secondLineRW.innerHTML = rightWingers[1];
     thirdLineRW.innerHTML = rightWingers[2];
     fourthLineRW.innerHTML = rightWingers[3];
+
+    d1.innerHTML = dmen[0];
+    d2.innerHTML = dmen[1];
+    d3.innerHTML = dmen[2];
+    d4.innerHTML = dmen[3];
+    d5.innerHTML = dmen[4];
+    d6.innerHTML = dmen[5];
 }
 
 
@@ -86,6 +113,7 @@ button.addEventListener("click", () => {
     shuffleCenters();
     shuffleLeftWingers();
     shuffleRightWingers();
+    shuffleDmen();
     populate();
 });
 
